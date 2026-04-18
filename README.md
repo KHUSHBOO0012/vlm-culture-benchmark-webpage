@@ -1,1 +1,1 @@
-# vlm-culture-benchmark-webpage
+# vlm-culture-benchmark-page
