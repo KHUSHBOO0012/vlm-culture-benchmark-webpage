@@ -390,19 +390,33 @@
 
             <!-- Visual Method Overview -->
             <section class="section">
-                <h2>Method Overview</h2>
+                <h2>Findings</h2>
                 <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px; margin-bottom: 40px;">
                     <p style="font-size: 1.1em; line-height: 1.6;">
-                        Our Elastic-Cache approach introduces a novel adaptive caching strategy for diffusion LLMs that significantly reduces computational overhead while maintaining generation quality. Unlike traditional methods that recompute all key-value pairs at every step, our approach intelligently decides when and where to refresh the cache based on attention dynamics.
+                        Vision-language models (VLMs) often exhibit <strong>"cultural anachronism"</strong> when interpreting historical artifacts. We introduce <strong>AnachroVision</strong>, a benchmark of 600 questions across six categories designed to evaluate temporal reasoning capabilities on 1,600 Indian cultural artifacts spanning prehistoric to modern periods. Our evaluation of eight state-of-the-art VLMs reveals significant deficiencies, with even the best model (GPT-4o) achieving only 50.4% overall accuracy.
                     </p>
                 </div>
                 
-                <div class="figure">
-                    <img src="static/overview.png" alt="Elastic-Cache Overview">
-                    <div class="figure-caption">
-                        Comparison between block-wise decoding and our sliding window approach with layer-aware cache updates.
-                    </div>
-                </div>
+                <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The AnachroVision Benchmark</h2>
+        <div class="content has-text-justified">
+          <p>
+            AnachroVision targets the temporal reasoning capabilities required for accurate historical artifact interpretation, focusing on Indian cultural heritage. The dataset was constructed through a rigorous four-stage pipeline, reducing 220,000 initial artifacts to 1,600 curated items.
+          </p>
+          <ul>
+            <li><strong>Data Collection:</strong> 220,000 artifacts from online sources like Sahapedia.</li>
+            <li><strong>Period Classification:</strong> Divided into 8 historical periods (Prehistoric to Modern India).</li>
+            <li><strong>Artifact Selection:</strong> Final 1,600 artifacts with balanced distribution across eras.</li>
+          </ul>
+        </div>
+        
+        <div class="has-text-centered">
+          <img src="./static/data_pipeline.jpg" alt="AnachroVision Pipeline" style="max-width:80%;">
+          <p><em>Figure 1: Data collection and processing pipeline.</em></p>
+        </div>
+      </div>
+    </div>
                 
                 <div style="max-width: 800px; margin: 40px auto; text-align: left; padding: 0 20px;">
                     <p style="font-size: 1.1em; line-height: 1.6;">
